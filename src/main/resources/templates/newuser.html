@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New User Creation</title>
+</head>
+<body>
+<div align="center">
+    <h1>Create a New User</h1>
+    <form action="#" th:action="@{/api/save}" th:object="${createnewuser}" method="post">
+        <div>
+            <label for="firstName"> First Name :</label>
+            <input type="text" id="firstName" placeholder=" Enter Your First Name" name="firstName"
+                   th:field="*{firstName}">
+        </div>
+        <br/>
+        <div>
+            <label for="lastName">Last Name :</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter Your Last Name" th:field="*{lastName}"
+                   required="required"><br/>
+        </div>
+        <br/>
+        <div>
+            <label for="gender1">Gender :</label>
+            <input type="radio" id="gender1" name="gender" checked value="Male" th:field="*{gender}">
+            <label for="gender">Male</label>
+            <input type="radio" id="gender" name="gender" value="Female">
+            <label for="gender">Female</label><br>
+        </div>
+        <div align="Center">
+            <input type="submit" value="save">
+        </div>
+    </form>
+</div>
+</body>
+</html>

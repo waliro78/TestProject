@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New User Creation Message </title>
+</head>
+<body>
+<div align="center">
+    <form action="#"  th:object="${userInputDetails}" method="post">
+        <h1> User Creation Successful</h1>
+        <p>User with the following information has successfully been created!!!</p>
+        First Name : <span th:text="*{firstName}"></span>
+        <br/>
+        <br/>
+        Last Name : <span th:text="*{lastName}"></span>
+        <br/>
+        <br/>
+        Gender : <span th:text="*{gender}"></span>
+
+
+    </form>
+</div>
+</body>
+</html>

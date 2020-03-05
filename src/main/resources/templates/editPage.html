@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Page</title>
+</head>
+<body>
+<div align="center">
+    <h1>Edit User Page</h1>
+    <form action="#" th:action="@{/api/submiteditedform}" th:object="${viewmodelobject}" method="post">
+        <label for="userId">User ID :</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input readonly type="text" id="userId" name="userId"  th:field="*{userId}">
+        <br/>
+        <br/>
+        <label for="firstName">First Name :</label>
+        <input type="text" id="firstName" name="firstName" placeholder="Edit First Name" th:field="*{firstName}">
+        <br/>
+        <br/>
+        <label for="lastName">Last Name :</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Edit last Name" th:field="*{lastName}">
+        <br/>
+        <br/>
+        <label>Gender :</label>
+        <label for="gender"> Male</label>
+        <input type="radio" id="gender" name="gender" value="Male" th:field="*{gender}">
+        <label for="gender2">Female</label>
+        <input type="radio" id="gender2"  name="gender" value="Female" th:field="*{gender}">
+        <br/>
+        <input type="submit" name="submit" value="submit">
+
+    </form>
+
+</div>
+</body>
+</html>
